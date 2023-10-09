@@ -1,0 +1,116 @@
+:root{
+    --primaryColor:#4c50d3;
+    --secondaryColor:#ffce00;
+    --fontColor:#1e1e1e;
+    --whiteColor:#fff;
+    --greyColor:#e7e7e7;
+    --darkGreyColor:#5f5f5f;
+    --softPurple: #e7e8ff;
+    --softBlue: #c3e1ff;
+    --softYellow: #fff5cc;
+    --softRed: #ffcbc8;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Lato',sans-serif;
+}
+body{
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+    background: var(--softPurple);
+}
+.content{
+	margin: 0 auto;
+	width: 80%;
+	height: 400px;
+}
+
+    
+.subject{
+    display: flex;
+    justify-content: center;
+}
+.subject input{
+    width: 80%;
+    margin: 10px 0;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 0 35px 0 20px;
+}
+.board{
+    width: 20%;
+    height: 40px;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    margin: 10px 5px;
+}
+.board option{
+    border: none;
+    outline: none;
+}
+.btn-insert{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    position: relative;  
+    background: #fff;
+    margin: 20px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    width: 70px;
+    height: 45px;
+    cursor: pointer;
+}
+.btn a{
+	color: var(--fontColor);
+	padding:20px;
+	width: 70px;
+    height: 45px;
+    text-decoration: none;
+}
+.btn:hover{
+    color: #fff;
+    background: var(--primaryColor);
+}
+.btn a:hover{
+    color: #fff;
+  
+}
+
+@media screen and (max-width:1000px) {
+    .menu-bar{
+        display: block;
+    }
+    .btn-close{
+        display: block;
+    }
+    .sidebar{
+        display: none;
+        width: 20%;
+        position: fixed;
+        
+    }
+    .filter{
+        gap: .7rem;
+    }
+    .main{
+        width: 100%;
+        margin-left: 0%;
+    }
+    .wrapper{
+        width: 49.7%;
+        display: inline-block;
+    }
+}

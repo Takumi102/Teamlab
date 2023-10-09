@@ -1,0 +1,362 @@
+:root{
+    --primaryColor:#4c50d3;
+    --secondaryColor:#ffce00;
+    --fontColor:#1e1e1e;
+    --whiteColor:#fff;
+    --greyColor:#e7e7e7;
+    --darkGreyColor:#5f5f5f;
+    --softPurple: #e7e8ff;
+    --softBlue: #c3e1ff;
+    --softYellow: #fff5cc;
+    --softRed: #ffcbc8;
+}
+.dark-mode{
+    --primaryColor:#000000;
+    --secondaryColor:#ffce00;
+    --fontColor:#1e1e1e;
+    --whiteColor:#ffffff;
+    --greyColor:#e7e7e7;
+    --darkGreyColor:#5f5f5f;
+    --softPurple: #323232;
+    --softBlue: #c3e1ff;
+    --softYellow: #fff5cc;
+    --softRed: #ffcbc8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Lato',sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.sidebar{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+    position: fixed;  	
+    left: 0;
+}
+
+.logo{
+    letter-spacing: 2px;
+}
+.menus{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; 
+    
+}
+.menus a{
+    display: flex;
+    align-items: center;
+    color: var(--whiteColor);
+    text-decoration: none;
+    
+}
+.menus ion-icon{
+    margin-right: 0.5rem;
+}
+.menus a:hover{
+    color: var(--secondaryColor);
+}
+.profile{
+   display: flex;
+   flex-direction: row; 
+   align-items: center;
+   gap: .5rem;
+   padding: 1rem;
+   background-color: var(--whiteColor);
+   color: var(--fontColor);
+   border: none;
+   border-radius: 10px;
+   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+   cursor: pointer;
+}
+.login{
+	display: flex;
+	align-items: center;
+	justify-content:center; 
+	padding: 0 1rem;
+	font-size: 20px;
+	width: 70px;
+    height: 30px;
+	color:black;
+}
+.profile:hover{
+    background-color: var(--secondaryColor);
+}
+.profile-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.proflie-name p{
+    font-size: 12px;
+}
+.proflie-name a{
+	color: black;
+	font-size: 20px;
+}
+.main{
+	position:absolute;
+    width: 80%;
+    min-height: 100%;
+    min-width: 100px;
+    height: max-content;
+    display: inline-block;
+    padding: 2rem 2%;
+    background: var(--softPurple);
+    margin-left:20%;
+    z-index: 1;
+}
+.main-header{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.menu-bar{
+    background: var(--whiteColor);
+    padding: .5rem;
+    border-radius: 20px;
+    display: none;
+}
+.form-box{
+	width: 100%;
+}
+.search{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    background: none;
+    border-radius: 20px;
+    padding: .5rem 1rem;
+    position: relative;
+    background-color: var(--whiteColor);
+}
+.search input{
+    width: 90%;
+    border: none;
+}
+.btn-search{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding: 0 5%;
+    border: none;
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+    font-size: 18px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    cursor: pointer;
+}
+.btn-search:hover{
+    background: var(--secondaryColor);
+    color: var(--fontColor);
+}
+.filter-wapper{
+    margin: 1rem 0;
+    font-size: 14px;
+}
+.filter{
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    margin: .5rem 0;
+}
+.btn-filter{
+    min-width: 110px;
+    padding: .5rem;
+    border: none;
+    border-radius: 20px;
+    background: var(--whiteColor);
+    cursor: pointer;
+}
+.btn-filter:hover{
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.select{
+	border: none;
+}
+.sort{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .5rem;
+}
+.sort p{
+    font-size: 14px;
+}
+.sort-list select{
+    height: 1.5rem;
+    border: none;
+    border-radius: 20px;
+    margin-top: 0 0.5rem;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: inline-block ;
+    padding: 1rem 0;
+    gap: 1rem;
+    overflow-y: auto;
+    
+}
+.icon-menu a{
+	text-decoration:none;
+	color: black;
+	
+}
+.icon-menu .icon{
+    width: 1rem;
+    height:1rem;
+	margin-right: 1rem;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 3%;
+    margin: 0 1%;
+    background: var(--whiteColor);
+    line-height: 1.5;
+    gap: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border: 10px;
+    border-radius: 10px;
+}
+
+.card-left{
+    width: 10%;
+    min-width: 50px;
+    display: flex;
+    justify-content: center;
+    border: 20%;
+}
+.card-left img{
+    width: 100%;
+    height: auto;
+    min-height: 50px;
+    border-radius: 50%;
+}
+.card-center{
+    width: 70%;
+}
+.card-right{
+    width: 15%;
+}
+.card-right h4{
+    width: 200px;
+    height: auto;
+    display: flex;
+    overflow-x: hidden;
+}
+.card-name, .card-sub{
+    font-size: 13px;
+    color: var(--darkGreyColor);
+}
+.card-sub{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-sub p{
+    display: flex;
+    padding: 0 .5rem 0 0;
+    align-items: center;
+}
+
+.sidebar.active{
+    display: flex;
+    width: 220px;
+    z-index: 100;
+}
+.menu-bar:hover{
+    cursor: pointer;
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+}
+.logo:hover{
+    cursor: pointer;
+}
+.btn-close{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+/*darkmode*/
+.box{
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    
+}
+.sun{
+    position: absolute;
+    transform: scale(0);
+    transition:  1s ease;
+}
+.box:checked~.sun{
+    transition-delay: .8s;
+    transform: scale(1) rotate(360deg);
+}
+.moon{
+    transition:  1s ease;
+    transition-delay: .8s;
+}
+.box:checked~.moon{
+    transition-delay: 0s;
+    transform: rotate(360deg) scale(0);
+}
+
+
+@media screen and (max-width:1000px) {
+    .menu-bar{
+        display: block;
+    }
+    .btn-close{
+        display: block;
+    }
+    .sidebar{
+        display: none;
+        width: 20%;
+        position: fixed;
+        
+    }
+    .filter{
+        gap: .7rem;
+    }
+    .main{
+        width: 100%;
+        margin-left: 0%;
+    }
+    .wrapper{
+        width:100%;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .wrapper{
+        width: 100%;
+        display: flex;
+    }
+}
